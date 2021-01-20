@@ -1,12 +1,12 @@
-### Date created
-Include the date you created this project and README file.
+### DATE CREATED
+INCLUDE THE DATE YOU CREATED THIS PROJECT AND README FILE.
 01/19/2021
-### Project Title
-Github Project
-### Description
-Describe what your project is about and what it does
-### Files used
-Include the files used
-bikeshare.py
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+### PROJECT TITLE
+GITHUB PROJECT (BIKESHARE)
+### DESCRIPTION
+ANALYSIS TO THE BIKESHARE DATA FOR BETTER UNDERSTANDING OF CUSTOMER USAGE.
+### FILES USED
+INCLUDE THE FILES USED
+BIKESHARE.PY
+### CREDITS
+IT'S IMPORTANT TO GIVE PROPER CREDIT. ADD LINKS TO ANY REPO THAT INSPIRED YOU OR BLOGPOSTS YOU CONSULTED.
