@@ -9,8 +9,8 @@ CITIES = ['chicago', 'new york', 'washington']
 MONTHS = ['january', 'february', 'march', 'april', 'may', 'june','all']
 DAYS = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday' ,'all']
 def get_filters():
-   
-    
+
+
     """
     Asks user to specify a city, month, and day to analyze.
 
@@ -57,9 +57,9 @@ def load_data (city, month, day):
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
-       
+
     """
-    
+
     df = pd.read_csv(CITY_DATA[city])
 
     df['Start Time'] = pd.to_datetime(df['Start Time'])
@@ -75,7 +75,7 @@ def load_data (city, month, day):
         df = df[df['day_of_the_week'] == day.title()]
     return df
 
-  
+
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
     print('\nCalculating The Most Frequent Times of Travel...\n')
@@ -104,7 +104,7 @@ def time_stats(df):
 
 
     # TO DO: display the most common start hour
-    
+
     df['hour'] = df['Start Time'].dt.hour
 
     most_common_hour = df['hour'].mode()[0]
@@ -184,8 +184,8 @@ def user_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-    
-# TO DO: Display raw data    
+
+# TO DO: Display raw data
 def display_data(df):
     i=0
     user_question=input('Would you like to see the raw data? \ntpye yes or no ,  > ').lower()
@@ -200,34 +200,34 @@ def main():
    while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
-        
+
         display_data(df)
-        
-        
-        q1 = input ("would you like to see data stats? type 'yes' or 'no' : ")
+
+
+        q1 = input ("would you like to see data statistics? type 'yes' or 'no' : ")
         if q1 == 'yes':
             print (time_stats(df))
         else:
             break
-            
-        q2 = input ("would you like to see more stats? type 'yes' or 'no' : ")
+
+        q2 = input ("would you like to see more statistics? type 'yes' or 'no' : ")
         if q2 == 'yes':
             print (station_stats(df))
         else:
             break
-            
-        q3 = input ("would you like to see more stats? type 'yes' or 'no' : ")    
+
+        q3 = input ("would you like to see more statistics? type 'yes' or 'no' : ")
         if q3 == 'yes':
             print (trip_duration_stats(df))
         else:
             break
-            
-        q4 = input ("would you like to see more stats? type 'yes' or 'no' : ", )
+
+        q4 = input ("would you like to see more statistics? type 'yes' or 'no' : ", )
         if q4 == 'yes':
             print (user_stats(df))
         else:
             break
-            
+
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
